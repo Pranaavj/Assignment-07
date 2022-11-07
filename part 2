@@ -1,0 +1,11 @@
+ void towerOfHanoi(int n, char f, char t, char a)
+    {
+        if (n == 1)
+        {
+            System.out.println("Move disk 1 from rod " +  f + " to rod " + t);
+            return;
+        }
+        towerOfHanoi(n-1, f, a, t);
+        System.out.println("Move disk " + n + " from rod " +  f + " to rod " + t);
+        towerOfHanoi(n-1, a, t, f);
+    }
